@@ -1,0 +1,12 @@
+---
+id: groonga
+tags:
+- groonga
+version: 1.0.0
+licenses:
+- CC BY 3.0
+author:
+  markup_language: :rd
+  name: Groonga Project
+  email: groonga@groonga.org
+  rubygems_user: kou
