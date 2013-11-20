@@ -85,7 +85,13 @@ include_theme("icon")
 @slide_logo_position = Proc.new do |slide, canvas, loader|
   x = slide.margin_left
   if slide.is_a?(TitleSlide)
-    y = canvas.height - loader.height - slide.margin_bottom
+    # TODO: Remove this check after Rabbit 2.1.3 is released.
+    if loader.nil?
+      logo_height = @slide_logo_height.call(slide, canvas)
+    else
+      logo_height = loader.height
+    end
+    y = canvas.height - logo_height - slide.margin_bottom
   else
     y = slide.margin_top
   end
