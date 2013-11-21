@@ -102,7 +102,7 @@ end
 end
 include_theme("slide-logo")
 
-slide_show_mode_p = !ENV["SLIDE_SHOW"].nil?
+slide_show_mode_p = !ENV["RABBIT_SLIDE_SHOW"].nil?
 
 unless print?
   @image_slide_number_image ||= "mini-usa-taro.png"
