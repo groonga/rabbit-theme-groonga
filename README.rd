@@ -64,6 +64,17 @@ You will find Rroonga logo is used in your slide.
 If you want to use other product such as Mroonga, use "mroonga"
 instead of "rroonga".
 
+=== Run as slide show mode
+
+You can show your slide for exhibit by using slide show mode. On slide
+show mode, your slide is moved to the next page automatically. When
+your slide goes to the last page, your slide goes to the first page.
+
+Set "RABBIT_SLIDE_SHOW" environment variable to use slide show mode
+like the following:
+
+  % RABBIT_SLIDE_SHOW=yes rake
+
 == License
 
 This theme and related files are licensed under ((<CC BY
