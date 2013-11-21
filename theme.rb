@@ -181,12 +181,15 @@ match(Slide, Body) do |bodies|
   end
 end
 
-slide_body = [Slide, Body]
-item_list_item = [ItemList, ItemListItem]
-
 @lightning_talk_proc_name = "lightning-groonga"
 @lightning_talk_as_large_as_possible = true
 include_theme("lightning-talk-toolkit")
+
+match(Slide) do |slides|
+  slides.each do |slide|
+    slide.takahashi
+  end
+end
 
 include_theme("title-on-image-toolkit")
 
