@@ -22,6 +22,48 @@ The Rabbit theme for Groonga family.
 
   rabbit -t rabbit-theme-groonga rabbit-theme-benchmark-en.gem
 
+== Customize
+
+=== Change product
+
+You can choose one of products in Groonga family. Here are available
+products:
+
+  * Groonga
+  * Rroonga
+  * Mroonga
+  * Droonga
+
+The default is Groonga.
+
+If you want to change product to Rroonga from Groonga, change your
+slide source to use your custom theme.
+
+Before:
+
+  = Title
+
+  : theme
+     groonga
+
+After:
+
+  = Title
+
+  : theme
+     .
+
+Then put "theme.rb" to the directory that locates your slide source
+with the following content:
+
+  @groonga_family = "rroonga" # Use downcase product name
+  include_theme("groonga")
+
+You will find Rroonga logo is used in your slide.
+
+If you want to use other product such as Mroonga, use "mroonga"
+instead of "rroonga".
+
 == License
 
 This theme and related files are licensed under ((<CC BY
