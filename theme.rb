@@ -10,7 +10,7 @@
   find_font_family("モトヤLマルベリ3等幅") ||
   @font_family
 
-@groonga_family ||= "groonga"
+@groonga_product ||= "groonga"
 
 colors = {
   "groonga" => {
@@ -37,7 +37,7 @@ background_color = "#ffffff"
 
 headline_bar_color = "#333333"
 
-base_color = colors[@groonga_family]
+base_color = colors[@groonga_product]
 
 set_graffiti_color("#{base_color[:foreground]}99")
 set_graffiti_line_width(30)
@@ -76,11 +76,11 @@ end
 
 include_theme("default")
 
-@groonga_icon_images ||= ["#{@groonga_family}-icon.svg"]
+@groonga_icon_images ||= ["#{@groonga_product}-icon.svg"]
 @icon_images = @groonga_icon_images
 include_theme("icon")
 
-@groonga_slide_logo_image ||= "#{@groonga_family}-icon-full-size.svg"
+@groonga_slide_logo_image ||= "#{@groonga_product}-icon-full-size.svg"
 @slide_logo_image = @groonga_slide_logo_image
 @slide_logo_position = Proc.new do |slide, canvas, loader|
   x = slide.margin_left

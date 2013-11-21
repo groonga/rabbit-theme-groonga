@@ -56,7 +56,7 @@ After:
 Then put "theme.rb" to the directory that locates your slide source
 with the following content:
 
-  @groonga_family = "rroonga" # Use downcase product name
+  @groonga_product = "rroonga" # Use downcase product name
   include_theme("groonga")
 
 You will find Rroonga logo is used in your slide.
