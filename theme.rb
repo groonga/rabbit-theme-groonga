@@ -65,7 +65,16 @@ set_progress_background(background_color)
 
 @tag_handlers ||= {}
 @tag_handlers["groonga"] = lambda do |options|
-  options[:target].prop_set("foreground", colors["groonga"][:foreground])
+  options[:target].prop_set("foreground", colors["groonga"][:emphasis])
+end
+@tag_handlers["rroonga"] = lambda do |options|
+  options[:target].prop_set("foreground", colors["rroonga"][:emphasis])
+end
+@tag_handlers["mroonga"] = lambda do |options|
+  options[:target].prop_set("foreground", colors["mroonga"][:emphasis])
+end
+@tag_handlers["droonga"] = lambda do |options|
+  options[:target].prop_set("foreground", colors["droonga"][:emphasis])
 end
 @tag_handlers["mysql"] = lambda do |options|
   options[:target].prop_set("foreground", mysql_color)
