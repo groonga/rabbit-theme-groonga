@@ -45,9 +45,9 @@ set_graffiti_line_width(30)
 set_progress_foreground(base_color[:foreground])
 set_progress_background(background_color)
 
-@title_slide_title_font_size = @x_large_font_size * 1.3
-@title_slide_content_source_font_size = @x_small_font_size
-@title_slide_date_font_size = @x_small_font_size
+@title_slide_title_font_size ||= @x_large_font_size * 1.3
+@title_slide_content_source_font_size ||= @x_small_font_size
+@title_slide_date_font_size ||= @x_small_font_size
 
 @default_headline_line_expand = true
 @default_headline_line_color = headline_bar_color
