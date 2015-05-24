@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2013  Groonga Project
+# Copyright (C) 2013-2015  Groonga Project
 #
 # License: CC BY 3.0
 
@@ -28,6 +28,10 @@ colors = {
   "droonga" => {
     :foreground => "#ae5881",
     :emphasis   => "#90196e",
+  },
+  "pgroonga" => {
+    :foreground => "#5795c6",
+    :emphasis   => "#1e3d57",
   },
 }
 

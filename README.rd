@@ -33,6 +33,7 @@ products:
   * Rroonga
   * Mroonga
   * Droonga
+  * PGroonga
 
 The default is Groonga.
 
