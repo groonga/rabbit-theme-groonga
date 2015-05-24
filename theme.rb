@@ -80,6 +80,9 @@ end
 @tag_handlers["droonga"] = lambda do |options|
   options[:target].prop_set("foreground", colors["droonga"][:emphasis])
 end
+@tag_handlers["pgroonga"] = lambda do |options|
+  options[:target].prop_set("foreground", colors["pgroonga"][:emphasis])
+end
 @tag_handlers["mysql"] = lambda do |options|
   options[:target].prop_set("foreground", mysql_color)
 end
