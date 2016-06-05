@@ -96,7 +96,10 @@ include_theme("default")
 @icon_images = @groonga_icon_images
 include_theme("icon")
 
-@groonga_slide_logo_image ||= "#{@groonga_product}-icon-full-size.svg"
+@groonga_slide_logo_image ||= lambda do |slide|
+  product = slide["groonga-product"] || @groonga_product
+  "#{product}-icon-full-size.svg"
+end
 @slide_logo_image = @groonga_slide_logo_image
 @slide_logo_position = Proc.new do |slide, canvas, loader|
   x = slide.margin_left
@@ -188,6 +191,14 @@ match(Slide, Body) do |bodies|
 
     body.margin_left = canvas.width * 0.05
     body.margin_right = canvas.width * 0.05
+  end
+end
+
+match("**", Emphasis) do |texts|
+  texts.each do |text|
+    product = text.slide["groonga-product"] || @groonga_product
+    emphasis_color = colors[product][:emphasis]
+    prop_set("foreground", emphasis_color)
   end
 end
 
