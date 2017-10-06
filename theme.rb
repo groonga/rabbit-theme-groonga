@@ -209,6 +209,8 @@ include_theme("lightning-talk-toolkit")
 match(Slide) do |slides|
   slides.each do |slide|
     slide.takahashi
+    slide.headline.wrap_mode = false
+    slide.headline.prop_set("size", @normal_font_size)
   end
 end
 
