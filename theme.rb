@@ -44,7 +44,7 @@ headline_bar_color = "#333333"
 base_color = colors[@groonga_product]
 
 set_graffiti_color("#{base_color[:foreground]}99")
-set_graffiti_line_width(30)
+set_graffiti_line_width(10)
 
 set_progress_foreground(base_color[:foreground])
 set_progress_background(background_color)
