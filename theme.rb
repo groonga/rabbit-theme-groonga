@@ -188,9 +188,6 @@ match(Slide, Body) do |bodies|
         end
       end
     end
-
-    body.margin_left = canvas.width * 0.05
-    body.margin_right = canvas.width * 0.05
   end
 end
 
